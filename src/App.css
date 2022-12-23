@@ -1,6 +1,6 @@
 .rightBorder{
-  border-bottom: 2px solid #000;
-}
-.columnBorder{
   border-right: 2px solid #000;
+}
+.bottomBorder{
+  border-bottom: 2px solid #000;
 }

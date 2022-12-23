@@ -92,6 +92,38 @@ export default function App() {
     }
     setSudokuArr(grid)
   }
+
+  var resetSudoku = () => {
+    
+  } 
+  var solveSudoku = () => {
+    let board = getDeepCopy(sudokuArr);
+    for(let i =0; i<9 ; i++){
+      for (let j=0; j<9; j++){
+        
+      }
+    }
+
+
+  }
+  
+  var checkSudoku = () => {
+    let board = getDeepCopy(sudokuArr);
+    for (let i = 0 ; i<9 ; i++){
+      // console.log(board[i].filter((item,index)=>board[i].indexOf(item)!==index))
+    }
+    let array_ = [];
+    for (let j = 0 ; j<9; j++){
+      for (let x = 0; x<9; x++){
+        // board[x].filter((item,index)=>board[x].indexOf(item)!==index)
+        array_.push(board[x][j])
+        if(x===8){
+          console.log(array_.filter((item,index)=>array_.indexOf(item)!==index))
+          array_=[]
+        }
+      }
+    }
+  } 
   return(
 
     <div style={outDiv_}>
@@ -119,9 +151,9 @@ export default function App() {
       </table>
 
       <div style={outDiv_1}>
-        <button style={btn_1}>reset</button>
-        <button style={btn_2}>solve</button>
-        <button style={btn_3}>check</button>
+        <button style={btn_1} onClick={resetSudoku}>reset</button>
+        <button style={btn_2} onClick={solveSudoku}>solve</button>
+        <button style={btn_3} onClick={checkSudoku}>check</button>
       </div>
 
     </div>
